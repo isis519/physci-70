@@ -4,6 +4,11 @@ body {
     color: black;
     
   }
+  header {
+    font: 20px Montserrat, sans-serif;
+    line-height: 1;
+    color:  black;
+  }
 
 p {font-size: 16px;}
 .margin {margin-bottom: 15px;}
