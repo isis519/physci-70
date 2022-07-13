@@ -13,11 +13,32 @@
 
   ### Week 4
 
-  Here is an image: 
+ This week's assignment had to do with one of my weaknesses: coding. The assignment was to program an Arduino board to do something. I decided to figure out how to make it light up with an LED and a button.
+ It was really complicated for me because I would continue to set certain things up wrong, or program it incorrectly, but in the end, I was able to made it light up with a button like I wanted.
+ This is the code for it.
+ #define LED_PIN 8
+#define BUTTON_PIN 7
+byte lastButtonState = LOW;
+byte ledState = LOW;
+void setup() {
+  pinMode(LED_PIN, OUTPUT);
+  pinMode(BUTTON_PIN, INPUT);
+}
+void loop() {
+  byte buttonState = digitalRead(BUTTON_PIN);
+  if (buttonState != lastButtonState) {
+    lastButtonState = buttonState;
+    if (buttonState == LOW) {
+      ledState = (ledState == HIGH) ? LOW: HIGH;
+      digitalWrite(LED_PIN, ledState);
+    }
+  }
+}
 
-  ![image of embroidery](./sew.png)
-
-  And here is a [link](../index.html).
+This is what it came out to.
+<video controls>
+<source src="microvid.MOV" type="video/mp4"> 
+</video>
 
 
 
